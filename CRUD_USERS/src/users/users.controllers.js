@@ -45,6 +45,8 @@ const createUser = (data) =>{
         password: data.password,
         birthday: data.birthday
     }
+    usersDB.push(newUser)
+    return newUser
 }
 
 module.exports = {

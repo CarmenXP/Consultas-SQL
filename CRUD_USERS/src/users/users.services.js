@@ -17,8 +17,13 @@ const UserById = (req, res) =>{
 
 const createNewUser = (req, res) => {
     const data = req.body
-    if(data){
-        const user = createNewUser(data)
+    if(data.first_name &&
+        data.last_name &&
+        data.email &&
+        data.password &&
+        data.birthday
+        ){
+        const user = createUser(data)
         res.status(201).json(user)
     }else{
         res.status(400).json({message: 'Missing data'})
