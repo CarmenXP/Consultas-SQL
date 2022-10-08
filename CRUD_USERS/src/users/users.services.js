@@ -1,11 +1,11 @@
 const {getAllUsers, getUserById, createUser} = require('./users.controllers')
 
-const getAllUsers = (req, res) =>{
+const AllUsers = (req, res) =>{
     const data = getAllUsers()
     res.status(200).json(data)
 }
 
-const getUserById = (req, res) =>{
+const UserById = (req, res) =>{
     const id = req.params.id
     const data = getUserById(id)
     if(data){
@@ -26,7 +26,7 @@ const createNewUser = (req, res) => {
 }
 
 module.exports = {
-    getAllUsers,
-    getUserById,
+    AllUsers,
+    UserById,
     createNewUser
 }

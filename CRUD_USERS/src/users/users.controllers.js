@@ -33,6 +33,7 @@ const getAllUsers = () =>{
 
 const getUserById = (id) =>{
     const data = usersDB.find(user => user.id == id)
+    return data
 }
 
 const createUser = (data) =>{
